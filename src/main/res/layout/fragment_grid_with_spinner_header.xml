@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/root_view" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:background="@color/pornhub_filters_bg" android:layout_width="match_parent" android:layout_height="48dp">
+        <Spinner android:id="@+id/spinner_1" android:layout_width="0dp" android:layout_height="match_parent" android:popupBackground="#444" android:layout_weight="1" android:spinnerMode="dropdown"/>
+        <View android:layout_gravity="center" android:background="@drawable/title_bar_separator" android:layout_width="1dp" android:layout_height="35dp" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+        <Spinner android:id="@+id/spinner_2" android:layout_width="0dp" android:layout_height="match_parent" android:popupBackground="#444" android:layout_weight="1" android:spinnerMode="dropdown"/>
+    </LinearLayout>
+    <include android:id="@+id/video_container" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/fragment_grid"/>
+</LinearLayout>

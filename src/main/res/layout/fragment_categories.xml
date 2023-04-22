@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/categoriesRecyclerView" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" app:layout_constraintBottom_toTopOf="@+id/categoriesBottomContainer" app:layout_constraintTop_toTopOf="0"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/categoriesBottomContainer" android:background="@color/pornhub_grey_light" android:layout_width="match_parent" android:layout_height="50dp" app:layout_constraintBottom_toBottomOf="0">
+        <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="10dp">
+            <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/fragment_category_list_txtClear" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/clear" android:textIsSelectable="false"/>
+            <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/fragment_category_list_txtCount" android:background="@drawable/categories_selected" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textIsSelectable="false"/>
+        </LinearLayout>
+        <View android:background="#888" android:layout_width="1dp" android:layout_height="24dp" android:layout_margin="4dp"/>
+        <LinearLayout android:gravity="center" android:id="@+id/fragment_category_list_llyApplyAndGo" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apply_and_go" android:textIsSelectable="false"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@+id/categoriesProgressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" app:layout_constraintBottom_toBottomOf="@+id/categoriesRecyclerView" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/categoriesRecyclerView"/>
+    <include android:visibility="gone" layout="@layout/include_error"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

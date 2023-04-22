@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@color/pornhub_grey_dark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" app:contentInsetStartWithNavigation="0dp">
+        <TextView android:textAppearance="@style/ToolbarTitleStyle" android:id="@+id/toolbar_title" android:paddingLeft="-1dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/toolbar">
+        <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/fragment_album_header"/>
+        <TextView android:textColor="@color/pornhub_txt_grey" android:gravity="center" android:id="@+id/fragment_album_txtTitle" android:background="@color/pornhub_grey_dark" android:paddingLeft="10dp" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginBottom="2dp"/>
+        <FrameLayout android:id="@+id/activity_albumdetails_fragmentContainer" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+    </LinearLayout>
+</RelativeLayout>

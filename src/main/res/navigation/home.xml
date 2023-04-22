@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_home" app:startDestination="@+id/exploreFragment">
+    <fragment android:label="@string/nav_lbl_explore" android:name="com.app.pornhub.view.home.explore.ExploreFragment" android:id="@+id/exploreFragment"/>
+    <fragment android:label="@string/nav_lbl_discover" android:name="com.app.pornhub.view.home.discover.DiscoverFragment" android:id="@+id/discoverFragment"/>
+    <fragment android:label="@string/videos" android:name="com.app.pornhub.view.home.videolistings.VideoListingsFragment" android:id="@+id/videosFragment"/>
+    <fragment android:label="@string/channels" android:name="com.app.pornhub.view.home.channels.ChannelsFragment" android:id="@+id/channelsFragment"/>
+    <fragment android:label="@string/nav_lbl_playlists" android:name="com.app.pornhub.view.home.playlists.PlaylistsCommonFragment" android:id="@+id/playlistsFragment"/>
+    <fragment android:label="@string/gifs" android:name="com.app.pornhub.view.home.gifs.GifListingsFragment" android:id="@+id/gifsFragment"/>
+    <fragment android:label="@string/photos" android:name="com.app.pornhub.view.home.albums.AlbumsFragment" android:id="@+id/photosFragment">
+        <argument android:name="type" android:defaultValue="COMMUNITY" app:argType="com.app.pornhub.view.home.albums.Type"/>
+        <argument android:name="userId" android:defaultValue="" app:argType="string"/>
+    </fragment>
+    <fragment android:label="@string/nav_lbl_categories" android:name="com.app.pornhub.view.home.categories.CategoriesFragment" android:id="@+id/categoriesFragment"/>
+    <fragment android:label="@string/nav_lbl_pornstars" android:name="com.app.pornhub.view.home.pornstars.PerformersFragment" android:id="@+id/performersFragment">
+        <argument android:name="order" android:defaultValue="" app:argType="string"/>
+    </fragment>
+    <fragment android:label="@string/pornstars_filter" android:name="com.app.pornhub.view.home.pornstars.PerformersFilterFragment" android:id="@+id/performersFilterFragment"/>
+    <fragment android:label="@string/account" android:name="com.app.pornhub.view.home.account.AccountFragment" android:id="@+id/accountFragment"/>
+    <fragment android:label="@string/login" android:name="com.app.pornhub.view.login.LoginFragment" android:id="@+id/loginFragment"/>
+    <fragment android:label="@string/profile" android:name="com.app.pornhub.view.user.ProfileFragment" android:id="@+id/profileFragment">
+        <argument android:name="targetUserId" android:defaultValue="" app:argType="string"/>
+        <argument android:name="targetUserName" android:defaultValue="" app:argType="string"/>
+    </fragment>
+    <fragment android:name="com.app.pornhub.view.user.UserVideoListingsFragment" android:id="@+id/userVideosFragment">
+        <argument android:name="targetUserId" android:defaultValue="" app:argType="string"/>
+    </fragment>
+    <fragment android:name="com.app.pornhub.view.user.UserPhotosFragment" android:id="@+id/userPhotosFragment">
+        <argument android:name="targetUserId" android:defaultValue="" app:argType="string"/>
+    </fragment>
+    <fragment android:name="com.app.pornhub.view.user.UserFriendsFragment" android:id="@+id/userFriendsFragment">
+        <argument android:name="targetUserId" android:defaultValue="" app:argType="string"/>
+    </fragment>
+    <fragment android:name="com.app.pornhub.view.commonviews.DeterrenceMessageFragment" android:id="@+id/deterrenceFragment">
+        <argument android:name="errorCode" app:argType="integer"/>
+    </fragment>
+    <dialog android:label="@string/premium_upgrade" android:name="com.app.pornhub.view.offline.OfflineVideoPopupDialog" android:id="@+id/offlineVideosUpsellFragment">
+        <argument android:name="source" app:argType="com.app.pornhub.view.offline.PopupSource"/>
+    </dialog>
+    <activity android:label="@string/settings" android:name="com.app.pornhub.view.user.PreferencesActivity" android:id="@+id/preferencesActivity"/>
+    <activity android:label="@string/premium_upgrade" android:name="com.app.pornhub.view.browser.PremiumRegistrationActivity" android:id="@+id/premiumRegistrationActivity">
+        <argument android:name="url" app:argType="string"/>
+        <argument android:name="title" app:argType="string"/>
+    </activity>
+    <activity android:label="@string/offline_videos" android:name="com.app.pornhub.view.offline.OfflineModeActivity" android:id="@+id/offlineVideosActivity"/>
+    <activity android:label="@string/sign_up" android:name="com.app.pornhub.view.login.SignupActivity" android:id="@+id/signupActivity"/>
+    <action android:id="@+id/action_global_exploreFragment" app:destination="@+id/exploreFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:launchSingleTop="true" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_discoverFragment" app:destination="@+id/discoverFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:launchSingleTop="true" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_videosFragment" app:destination="@+id/videosFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:launchSingleTop="true" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_channelsFragment" app:destination="@+id/channelsFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_playlistsFragment" app:destination="@+id/playlistsFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_gifsFragment" app:destination="@+id/gifsFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_photosFragment" app:destination="@+id/photosFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_categoriesFragment" app:destination="@+id/categoriesFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_pornstarsFragment" app:destination="@+id/performersFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_pornstarsFilterFragment" app:destination="@+id/performersFilterFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_accountFragment" app:destination="@+id/accountFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_loginFragment" app:destination="@+id/loginFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_profileFragment" app:destination="@+id/profileFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_userVideosFragment" app:destination="@+id/userVideosFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_userPhotosFragment" app:destination="@+id/userPhotosFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_userFriendsFragment" app:destination="@+id/userFriendsFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_deterrenceFragment" app:destination="@+id/deterrenceFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_settingsActivity" app:destination="@+id/preferencesActivity" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_signupActivity" app:destination="@+id/signupActivity" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_premiumRegistrationActivity" app:destination="@+id/premiumRegistrationActivity" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_offlineModeActivity" app:destination="@+id/offlineVideosActivity" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_offlineVideosUpsellFragment" app:destination="@+id/offlineVideosUpsellFragment" app:enterAnim="@animator/nav_default_enter_anim" app:exitAnim="@animator/nav_default_exit_anim" app:popEnterAnim="@animator/nav_default_pop_enter_anim" app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+</navigation>

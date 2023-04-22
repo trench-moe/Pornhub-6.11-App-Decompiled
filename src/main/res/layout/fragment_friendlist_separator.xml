@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="40dp">
+    <TextView android:textSize="10dp" android:textStyle="bold" android:textColor="@color/pornhub_txt_grey" android:gravity="center_vertical" android:id="@+id/fragment_friendlist_separator_txtTitle" android:background="@drawable/bitmap_background_menu_selected_repeat" android:paddingLeft="20dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:textAllCaps="true"/>
+</LinearLayout>

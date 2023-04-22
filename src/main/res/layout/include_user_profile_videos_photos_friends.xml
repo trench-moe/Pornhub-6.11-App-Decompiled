@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/user_info_videos_container" android:background="@color/pornhub_grey_dark" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginRight="2dp" android:layout_marginBottom="4dp" android:layout_weight="1">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="3dp" android:src="@drawable/ic_videos_profile"/>
+        <TextView android:textSize="15dp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@+id/user_info_label_videos" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:text="@string/videos"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/user_info_photos_container" android:background="@color/pornhub_grey_dark" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginTop="4dp" android:layout_marginRight="2dp" android:layout_marginBottom="4dp" android:layout_weight="1">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="3dp" android:src="@drawable/ic_photos_profile"/>
+        <TextView android:textSize="15dp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@+id/user_info_label_photos" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:text="@string/photos"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/user_info_friends_container" android:background="@color/pornhub_grey_dark" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginTop="4dp" android:layout_marginBottom="4dp" android:layout_weight="1">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="3dp" android:src="@drawable/ic_connections_profile"/>
+        <TextView android:textSize="15dp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@+id/user_info_label_friends" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:text="@string/friends"/>
+    </LinearLayout>
+</LinearLayout>

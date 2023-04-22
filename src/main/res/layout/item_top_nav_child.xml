@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="wrap_content" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="center" android:id="@+id/mainContainer" android:background="@drawable/bg_item_top_nav_fill" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="16sp" android:textStyle="bold" android:gravity="center" android:id="@+id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="6dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <ImageView android:id="@+id/expandIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_top_nav_expand" app:layout_constraintBottom_toBottomOf="@+id/text" app:layout_constraintEnd_toEndOf="0" app:layout_constraintHorizontal_bias="0.3" app:layout_constraintStart_toEndOf="@+id/text" app:layout_constraintTop_toTopOf="@+id/text" app:layout_constraintVertical_bias="0.66"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

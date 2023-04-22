@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/user_info_avatar" android:layout_width="100dp" android:layout_height="100dp" android:layout_margin="4dp" android:src="@drawable/thumb_preview" android:scaleType="fitXY"/>
+    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+        <TextView android:textColor="#999" android:id="@+id/user_info_label_joined" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_profile_joined"/>
+        <TextView android:textColor="@android:color/white" android:id="@+id/user_info_joined" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/user_info_label_joined"/>
+        <TextView android:textColor="#999" android:id="@+id/user_info_label_lastlogin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_profile_last_login" android:layout_below="@+id/user_info_label_joined"/>
+        <TextView android:textColor="@android:color/white" android:id="@+id/user_info_lastlogin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/user_info_label_lastlogin" android:layout_below="@+id/user_info_joined"/>
+        <TextView android:textColor="#999" android:id="@+id/user_info_label_watchcount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_profile_videos_watched" android:layout_below="@+id/user_info_label_lastlogin"/>
+        <TextView android:textColor="@android:color/white" android:id="@+id/user_info_watchcount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/user_info_label_watchcount" android:layout_below="@+id/user_info_label_lastlogin"/>
+        <ImageView android:id="@+id/user_info_showmore" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_info_expand" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/root_view" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/fragment_user_videos_tabs_container" android:background="@color/pornhub_filters_bg" android:layout_width="match_parent" android:layout_height="@dimen/top_nav_container_height">
+        <LinearLayout android:layout_gravity="top" android:id="@+id/fragment_user_videos_llyTabs" android:background="@drawable/bitmap_background_videodetail_tab_repeat" android:layout_width="match_parent" android:layout_height="50dp">
+            <TextView android:gravity="center" android:id="@+id/fragment_user_videos_tab_txtHistory" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/history" android:layout_weight="1" style="@style/CustomPageTab"/>
+            <TextView android:gravity="center" android:id="@+id/fragment_user_videos_tab_txtFavorites" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/favorites" android:layout_weight="1" style="@style/CustomPageTab"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

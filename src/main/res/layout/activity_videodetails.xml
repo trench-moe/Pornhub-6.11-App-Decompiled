@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/rootLayout" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/layoutTopContainer" android:layout_width="match_parent" android:layout_height="300dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@color/pornhub_grey_light" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:contentInsetStartWithNavigation="0dp">
+            <TextView android:textAppearance="@style/ToolbarTitleStyle" android:id="@+id/toolbar_title" android:paddingLeft="-1dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </androidx.appcompat.widget.Toolbar>
+        <include android:id="@+id/appbar_video_container" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/layout_container_video"/>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/video_details_container" android:layout_width="match_parent" android:layout_height="0dp" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toBottomOf="@+id/layoutTopContainer">
+        <include android:id="@+id/activity_video_details_playlist_panel" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="0" layout="@layout/layout_playlist_expandable_panel"/>
+        <com.google.android.material.tabs.TabLayout android:id="@+id/activity_videodetails_tablayout" android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/activity_video_details_playlist_panel" app:tabGravity="fill" app:tabMode="fixed" style="@style/VideoTabsLayout"/>
+        <androidx.viewpager.widget.ViewPager android:id="@+id/activity_videodetails_viewpager" android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/activity_videodetails_tablayout"/>
+        <androidx.constraintlayout.widget.Group android:id="@+id/activity_details_info_group" android:layout_width="wrap_content" android:layout_height="wrap_content" app:constraint_referenced_ids="activity_videodetails_tablayout,activity_videodetails_viewpager"/>
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/expandablePanelContentContainer" android:background="@color/playlist_dialog_about_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toBottomOf="@+id/activity_video_details_playlist_panel">
+            <ImageView android:id="@+id/shufflePlaylistButton" android:padding="14dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_shuffle" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+            <ImageView android:id="@+id/repeatPlaylistButton" android:padding="14dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_outline_repeat_24_px" app:layout_constraintStart_toEndOf="@+id/shufflePlaylistButton" app:layout_constraintTop_toTopOf="0"/>
+            <FrameLayout android:id="@+id/pep_videos_fragment_container" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toBottomOf="@+id/shufflePlaylistButton"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout android:id="@+id/loading_view" android:background="@color/pornhub_background" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true"/>
+    </FrameLayout>
+    <include android:id="@+id/error_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="?attr/actionBarSize" layout="@layout/include_error"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

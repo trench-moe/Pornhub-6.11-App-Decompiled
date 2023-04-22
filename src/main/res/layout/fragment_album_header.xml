@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:flowlayout="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/fragment_album_header_imgUserThumbnail" android:layout_width="50dp" android:layout_height="50dp" android:layout_margin="4dp"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="4dp">
+                <TextView android:textStyle="bold" android:textColor="@color/pornhub_txt_grey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="@string/by"/>
+                <TextView android:textStyle="bold" android:textColor="@color/orange" android:gravity="center" android:id="@+id/fragment_album_header_txtUsername" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="4dp">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_views_small"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:textColor="@color/pornhub_txt_grey" android:id="@+id/fragment_album_header_txtViewCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp"/>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:src="@drawable/ic_date"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:textColor="@color/pornhub_txt_grey" android:id="@+id/fragment_album_header_txtDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/fragment_album_header_llyTags" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp">
+        <TextView android:textStyle="bold" android:textColor="@color/pornhub_txt_grey" android:layout_width="50dp" android:layout_height="wrap_content" android:layout_margin="4dp" android:text="@string/album_details_tags"/>
+        <com.app.pornhub.view.common.widget.FlowLayout android:id="@+id/fragment_album_header_flowlayoutTags" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="4dp" flowlayout:horizontalSpacing="4dp" flowlayout:verticalSpacing="4dp"/>
+    </LinearLayout>
+</LinearLayout>

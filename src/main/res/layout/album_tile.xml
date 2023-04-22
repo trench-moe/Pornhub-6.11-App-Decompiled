@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.app.pornhub.view.common.widget.AlbumCoverImageViewCustom android:id="@+id/album_tile_imgThumbnail" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/thumb_preview" android:scaleType="fitXY"/>
+    <LinearLayout android:orientation="horizontal" android:background="@color/pornhub_grey_dark" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="20dp" android:layout_margin="4dp" android:src="@drawable/ic_photos"/>
+        <TextView android:textSize="12sp" android:textColor="@color/orange" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/album_tile_txtName" android:layout_width="0dp" android:layout_height="match_parent" android:text="Medium Text" android:singleLine="true" android:layout_weight="1"/>
+        <TextView android:textSize="12sp" android:textColor="@color/pornhub_txt_grey" android:gravity="center" android:id="@+id/album_tile_txtCount" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="4dp" android:text="15"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/pornhub_grey_dark" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:id="@+id/include_list_footer_llyLoading" android:visibility="visible" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginLeft="1dp" android:layout_marginRight="1dp">
+        <ProgressBar android:layout_width="25dp" android:layout_height="25dp" android:layout_margin="10dp"/>
+        <TextView android:textColor="@android:color/white" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/loading"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@+id/include_list_footer_llyError" android:visibility="gone" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginLeft="1dp" android:layout_marginRight="1dp">
+        <TextView android:textColor="@android:color/white" android:gravity="center_vertical" android:id="@+id/include_list_footer_txtError" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="3dp" android:layout_weight="1"/>
+        <Button android:textColor="@android:color/white" android:id="@+id/include_list_footer_btnRetry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:text="@string/retry"/>
+    </LinearLayout>
+</LinearLayout>

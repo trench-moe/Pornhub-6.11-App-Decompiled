@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Privacy">
+        <CheckBoxPreference android:persistent="true" android:title="@string/password_lock_title" android:key="passcode_active" android:summary="@string/password_lock_summary"/>
+        <Preference android:persistent="false" android:title="Discreet icon" android:key="discreet_icon" android:summary="Select the icon you prefer for the app"/>
+        <CheckBoxPreference android:persistent="true" android:title="@string/collect_anonymous_data" android:key="cdata" android:summary="@string/manage_priv_settings_description" android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/about" android:key="@string/about">
+        <Preference android:persistent="false" android:title="@string/privacy_policy" android:selectable="true" android:key="@string/pref_privacy"/>
+        <Preference android:persistent="false" android:title="@string/terms_of_service" android:selectable="true" android:key="@string/pref_terms"/>
+        <Preference android:title="@string/app_version" android:selectable="false" android:summary="@string/appVersionName"/>
+        <CheckBoxPreference android:title="@string/stage_dev_title" android:key="@string/pref_use_stage" android:summary="@string/use_stage_or_dev"/>
+        <EditTextPreference android:title="@string/stage_dev_input_title" android:key="@string/pref_stage_input" android:summary="@string/stage_dev_input_description" android:defaultValue="0" android:inputType="text"/>
+        <EditTextPreference android:title="@string/non_premium_domain_override" android:key="@string/pref_web_domain_non_premium" android:summary="@string/non_premium_domain_override_description" android:inputType="text"/>
+        <EditTextPreference android:title="@string/premium_domain_override" android:key="@string/pref_web_domain_premium" android:summary="@string/premium_domain_override_description" android:inputType="text"/>
+    </PreferenceCategory>
+</PreferenceScreen>

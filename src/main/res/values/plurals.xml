@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="downloaded_videos">
+        <item quantity="one">Added %d video</item>
+        <item quantity="other">Added %d videos</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Fast forward %d second</item>
+        <item quantity="other">Fast forward %d seconds</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Rewind %d second</item>
+        <item quantity="other">Rewind %d seconds</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d new notification</item>
+        <item quantity="other">%d new notifications</item>
+    </plurals>
+    <plurals name="n_times">
+        <item quantity="one">%d time</item>
+        <item quantity="other">%d times</item>
+    </plurals>
+    <plurals name="plural_n_photos">
+        <item quantity="one">%s Photo</item>
+        <item quantity="other">%s Photos</item>
+    </plurals>
+    <plurals name="plural_n_videos">
+        <item quantity="one">%s Video</item>
+        <item quantity="other">%s Videos</item>
+    </plurals>
+    <plurals name="plural_n_views">
+        <item quantity="one">%s View</item>
+        <item quantity="other">%s Views</item>
+    </plurals>
+    <plurals name="plural_videos">
+        <item quantity="one">Video</item>
+        <item quantity="other">Videos</item>
+    </plurals>
+    <plurals name="quick_seek_x_second">
+        <item quantity="one">%d second</item>
+        <item quantity="many">%d seconds</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+</resources>

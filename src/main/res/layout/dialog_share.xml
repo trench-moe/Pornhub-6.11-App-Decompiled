@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="#666666" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:background="@color/pornhub_grey_dark" android:layout_width="match_parent" android:layout_height="60dp">
+        <TextView android:textStyle="bold" android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="25dp" android:layout_marginBottom="5dp" android:text="Share it with your friends!"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/dialog_share_llyEmail" android:background="@color/pornhub_grey_dark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp">
+        <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/share_mail"/>
+        <TextView android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="@string/email"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/dialog_share_llyTwitter" android:background="@color/pornhub_grey_dark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp">
+        <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/share_twitter"/>
+        <TextView android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="@string/twitter"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/dialog_share_llyGoogleplus" android:background="@color/pornhub_grey_dark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp">
+        <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/share_google"/>
+        <TextView android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="@string/google_plus"/>
+    </LinearLayout>
+</LinearLayout>

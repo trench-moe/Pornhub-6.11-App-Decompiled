@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/root_view" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@+id/appBar" android:background="@android:color/transparent" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@+id/collapsingToolbar" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" app:contentScrim="@color/pornhub_grey_dark" app:expandedTitleMarginEnd="64dp" app:expandedTitleMarginStart="48dp" app:expandedTitleTextAppearance="@style/ExpandedTitleTextStyle" app:layout_scrollFlags="snap|exitUntilCollapsed|scroll" app:statusBarScrim="@color/pornhub_grey_dark">
+            <include android:id="@+id/appbar_header_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="?attr/actionBarSize" app:layout_collapseMode="parallax" layout="@layout/layout_container_pornstar_info"/>
+            <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@color/pornhub_grey_light" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:contentInsetStartWithNavigation="0dp" app:layout_collapseMode="pin">
+                <TextView android:textAppearance="@style/ToolbarTitleStyle" android:id="@+id/toolbar_title" android:paddingLeft="-1dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/main_content_container" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.app.pornhub.view.common.widget.IconTabLayout android:id="@+id/tab_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:tabGravity="fill" app:tabMaxWidth="0dp" app:tabMode="fixed" style="@style/PornstarTabLayout"/>
+        <androidx.viewpager.widget.ViewPager android:id="@+id/pager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </LinearLayout>
+    <FrameLayout android:id="@+id/loading_view" android:background="@color/pornhub_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="?attr/actionBarSize">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true"/>
+    </FrameLayout>
+    <include android:id="@+id/error_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="?attr/actionBarSize" layout="@layout/include_error"/>
+    <FrameLayout android:id="@+id/sortingOptionsContainer" android:background="@color/pornhub_background" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@+id/sortingOptionsContainerBackground" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center" android:id="@+id/sorting_options_recyclerview" android:layout_width="match_parent" android:layout_height="wrap_content" android:overScrollMode="never"/>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

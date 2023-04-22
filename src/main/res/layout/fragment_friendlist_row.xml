@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@+id/fragment_friendlist_row_lly" android:layout_width="match_parent" android:layout_height="48dp">
+    <ImageView android:id="@+id/fragment_friendlist_row_imgUser" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/thumb_preview" android:scaleType="fitXY"/>
+    <TextView android:textColor="@color/orange" android:gravity="center_vertical" android:id="@+id/fragment_friendlist_row_txtUser" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:layout_weight="1"/>
+    <ImageView android:id="@+id/fragment_friendlist_row_imgUserAdd" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/ic_option"/>
+</LinearLayout>

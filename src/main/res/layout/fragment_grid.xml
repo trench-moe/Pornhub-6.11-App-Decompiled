@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerview" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <FrameLayout android:id="@+id/container_loading" android:background="@color/pornhub_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true"/>
+    </FrameLayout>
+    <include android:id="@+id/errorView" android:visibility="gone" layout="@layout/include_error"/>
+    <FrameLayout android:id="@+id/empty_content_msg_container" android:background="@color/pornhub_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textStyle="bold" android:textColor="@color/pornhub_txt_grey" android:layout_gravity="center" android:id="@+id/empty_content_msg" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <FrameLayout android:id="@+id/overlay_container" android:background="@color/pornhub_background" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@+id/overlay_container_background" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center" android:id="@+id/sorting_options_recyclerview" android:layout_width="match_parent" android:layout_height="wrap_content" android:overScrollMode="never"/>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

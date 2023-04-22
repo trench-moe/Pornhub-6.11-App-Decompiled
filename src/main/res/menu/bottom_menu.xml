@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_explore" android:id="@+id/exploreFragment" android:title="@string/nav_lbl_home"/>
+    <item android:icon="@drawable/ic_menu_categories" android:id="@+id/categoriesFragment" android:title="@string/nav_lbl_categories"/>
+    <item android:icon="@drawable/ic_menu_pornstars" android:id="@+id/performersFragment" android:title="@string/nav_lbl_pornstars"/>
+</menu>

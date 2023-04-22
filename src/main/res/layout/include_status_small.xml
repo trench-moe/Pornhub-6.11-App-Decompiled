@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/status_small_llyLoading" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ProgressBar android:layout_width="25dp" android:layout_height="25dp" android:layout_margin="10dp"/>
+        <TextView android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/loading"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/status_small_llyError" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="8dp">
+        <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@+id/status_small_txtError" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/error_default"/>
+        <Button android:textColor="@android:color/white" android:gravity="center" android:id="@+id/status_small_btnRetry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:text="@string/retry"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+package z2;
+
+import z2.g0;
+
+/* loaded from: classes2.dex */
+public class ja implements ie.a<Object> {
+
+    /* renamed from: a  reason: collision with root package name */
+    public final /* synthetic */ g0.pd0 f21330a;
+
+    public ja(g0.pd0 pd0Var) {
+        this.f21330a = pd0Var;
+    }
+
+    @Override // ie.a
+    public Object get() {
+        g0.pd0 pd0Var = this.f21330a;
+        return new g0.gl(pd0Var.f20349a, pd0Var.f20350b, null);
+    }
+}

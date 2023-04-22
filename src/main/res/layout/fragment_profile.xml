@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/profile_root_view" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include layout="@layout/include_user_profile_info"/>
+        <include android:visibility="gone" layout="@layout/include_user_profile_info_more"/>
+        <include layout="@layout/include_user_profile_videos_photos_friends"/>
+        <TextView android:textSize="18sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@+id/user_info_label_wall" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:text="&apos;s Wall"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerview" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <FrameLayout android:id="@+id/container_loading" android:background="@color/pornhub_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true"/>
+        </FrameLayout>
+        <TextView android:textColor="@color/white" android:id="@+id/error_text" android:background="@color/pornhub_grey_dark" android:padding="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

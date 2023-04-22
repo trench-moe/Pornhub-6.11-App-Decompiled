@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/home_menu_item_media_route" android:title="@string/cast" app:actionProviderClass="androidx.mediarouter.app.MediaRouteActionProvider" app:showAsAction="always"/>
+    <item android:icon="@drawable/ic_search" android:id="@+id/home_menu_item_search" android:title="@string/search" app:actionViewClass="androidx.appcompat.widget.SearchView" app:showAsAction="collapseActionView|always"/>
+    <item android:icon="@drawable/ic_user_placeholder" android:id="@+id/home_menu_item_user" android:title="@string/username" app:showAsAction="always"/>
+</menu>

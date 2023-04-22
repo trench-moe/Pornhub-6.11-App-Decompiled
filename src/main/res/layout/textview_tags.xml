@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textStyle="bold" android:textColor="@color/orange" android:background="@drawable/tag_box_selector" android:paddingLeft="16dp" android:paddingTop="8dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tags" android:shadowColor="#000000" android:shadowDx="1" android:shadowDy="3" android:shadowRadius="1"/>

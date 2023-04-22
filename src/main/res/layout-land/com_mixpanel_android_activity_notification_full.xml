@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/com_mixpanel_android_notification_gradient" android:paddingRight="50dp" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@string/com_mixpanel_android_notification_image"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:baselineAligned="false">
+        <RelativeLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:layout_weight="50">
+            <com.mixpanel.android.takeoverinapp.FadingImageView android:id="@+id/com_mixpanel_android_notification_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/com_mixpanel_android_logo" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_centerInParent="true" android:contentDescription="@string/com_mixpanel_android_notification_image"/>
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="50">
+            <LinearLayout android:id="@+id/com_mixpanel_android_button_exit_wrapper" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+                <ImageView android:id="@+id/com_mixpanel_android_image_close" android:layout_width="23dp" android:layout_height="23dp" android:src="@drawable/com_mixpanel_android_close_new" android:contentDescription="@string/com_mixpanel_android_close"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="22sp" android:textStyle="bold" android:textColor="#ffffff" android:gravity="center_horizontal" android:id="@+id/com_mixpanel_android_notification_title" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView android:textSize="17sp" android:textColor="#ffffff" android:gravity="center_horizontal" android:id="@+id/com_mixpanel_android_notification_subtext" android:paddingLeft="20dp" android:paddingTop="10dp" android:paddingRight="20dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:weightSum="2">
+                    <Button android:textSize="17sp" android:textStyle="bold" android:textColor="@android:color/white" android:ellipsize="end" android:id="@+id/com_mixpanel_android_notification_button" android:padding="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:minWidth="150dp" android:text="@string/com_mixpanel_android_done" android:maxLines="1" android:layout_weight="1"/>
+                    <Button android:textSize="17sp" android:textStyle="bold" android:textColor="@android:color/white" android:ellipsize="end" android:id="@+id/com_mixpanel_android_notification_second_button" android:padding="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:text="@string/com_mixpanel_android_done" android:maxLines="1" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

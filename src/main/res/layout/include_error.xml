@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="bottom|center_horizontal" android:orientation="vertical" android:id="@+id/errorLayout" android:background="@drawable/gradient_404" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@+id/error_txtError" android:background="@drawable/bubble" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/error_default"/>
+    <ImageView android:id="@+id/error_segment_image" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/pornhub_grey_dark" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginLeft="2dp" android:layout_marginTop="2dp" android:layout_marginRight="2dp" android:layout_weight="1">
+        <com.app.pornhub.view.common.widget.CategoryImageViewCustom android:id="@+id/categoryImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY"/>
+        <ImageView android:layout_gravity="start|top" android:id="@+id/icVerified" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:src="@drawable/ic_blue_checkmark"/>
+        <TextView android:textSize="16dp" android:textColor="@color/orange" android:ellipsize="marquee" android:gravity="center" android:layout_gravity="bottom" android:id="@+id/categoryTitle" android:background="@color/categories_title_background" android:padding="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever"/>
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/categorySelectionContainer" android:padding="5dp" android:layout_width="match_parent" android:layout_height="40dp">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/categorySelectionImage" android:layout_width="28dp" android:layout_height="28dp"/>
+        <TextView android:textSize="16dp" android:gravity="center" android:id="@+id/categorySelectionText" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="2dp"/>
+    </LinearLayout>
+</LinearLayout>
